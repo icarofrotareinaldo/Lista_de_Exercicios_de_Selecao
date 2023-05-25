@@ -9,7 +9,7 @@ else{
 document.write("O número que você digitou é impar."); 
 }
 
-//2. Verificar se o ano é bissexto, anos bissextos são anos com 366 dias. 3. Faça um programa que informe o século de um determinado ano. Por exemplo, se o usuário digitar 1789, o programa deverá informar: “século 18”.
+//2. Verificar se o ano é bissexto, anos bissextos são anos com 366 dias.
 
 let ano = Number(prompt("Digite algum ano que você deseja conhecer melhor: ")); 
 let b = ano%4; 
@@ -20,6 +20,15 @@ document.write("O ano digitado é bissexto.");
 } 
 else{ 
 document.write("O ano digitado não é bissexto."); 
+}
+
+//3. Faça um programa que informe o século de um determinado ano. Por exemplo, se o usuário digitar 1789, o programa deverá informar: “século 18”.
+
+let ano = Number(prompt("Digite o ano que você deseja saber o século: "));
+let seculo = Math.floor(ano/100);
+if(seculo % 100 !=0){
+ let resposta = (seculo + 1);
+ document.write(`O ano selecionado é do Século` ${resposta});
 }
 
 //4. Efetuar um programa para resolver a segundo grau, verifique se é possível resolver a equação calculando o delta.
