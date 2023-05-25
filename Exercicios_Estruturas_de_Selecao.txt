@@ -1,0 +1,109 @@
+//1. Faça um programa que receba um número inteiro e verifique se este número é par ou ímpar.
+
+let n=Number(prompt("Digite algum número: ")); 
+let d = n%2; 
+if(d==0){ 
+document.write("O número que você digitou é par"); 
+} 
+else{ 
+document.write("O número que você digitou é impar."); 
+}
+
+//2. Verificar se o ano é bissexto, anos bissextos são anos com 366 dias. 3. Faça um programa que informe o século de um determinado ano. Por exemplo, se o usuário digitar 1789, o programa deverá informar: “século 18”.
+
+let ano = Number(prompt("Digite algum ano que você deseja conhecer melhor: ")); 
+let b = ano%4; 
+let i = ano%100; 
+let s = ano%400; 
+if(b==0 && i!=0 || s==0){ 
+document.write("O ano digitado é bissexto.");
+} 
+else{ 
+document.write("O ano digitado não é bissexto."); 
+}
+
+//4. Efetuar um programa para resolver a segundo grau, verifique se é possível resolver a equação calculando o delta.
+
+alert("O número ao lado do x² é chamado de A, o número ao lado 
+do x é chamado de B e o número isolado é chamado de C"); 
+let a = Number(prompt("Digite um valor para A")); 
+let b = Number(prompt("Digite um valor para B")); 
+let c = Number(prompt("Digite um valor para C")); 
+let d = (b**2)-(4*a*c); 
+let e = (-b+Math.sqrt(d))/2*a; 
+let f = (-b-Math.sqrt(d))/2*a; 
+let g = -b/(2*a); 
+if(d>0){ 
+document.write(Os valores de x são iguais a ${parseInt(e)} 
+e ${parseInt(f)}); 
+}
+else if(d==0){ 
+document.write(O valor de x é igual a ${parseInt(g)}); 
+} 
+else{ 
+document.write("A equação não pode ser resolvida"); 
+}
+
+//5. Fazer um programa para determinar se três valores formam ou não um triângulo, se formar classifique o triângulo.
+
+let l1 = Number(prompt("Digite o valor do lado 1")); 
+let l2 = Number(prompt("Digite o valor do lado 2")); 
+let l3 = Number(prompt("Digite o valor do lado 3")); 
+if(l1<l2+l3  l2<l1+l3  l3<l2+l1){ 
+if(l1==l2 && l2==l3){ 
+document.write("O seu triângulo é equilátero."); 
+} 
+else if(l1==l2  l2==l3  l1==l3){ 
+document.write("O seu triângulo é isóceles."); 
+} 
+else{ 
+document.write("O seu triângulo é escaleno."); 
+} 
+} 
+else{ 
+document.write("Os lados selecionados não formam um triângulo."); 
+}
+
+//6. Crie um programa que determine se um ponto (X,Y) está dentro de um círculo ou não. Para tanto o programa deverá ler os seguintes dados de Teclado: coordenadas do centro do círculo; Raio do círculo: ponto a ser testado.
+
+O programa deverá imprimir na tela mensagens perguntado ao usuário os dados necessários e a seguir permitir que este os digite.
+
+let x = Number(prompt("Digite o ponto x do centro: ")); 
+let r = Number(prompt("Digite o valor do raio: ")); 
+let y = Number(prompt("Digite o ponto y do centro: ")); 
+let x1 = Number(prompt("Digite o ponto x do ponto: ")); 
+let y1 = Number(prompt("Digite o ponto y do ponto: ")); 
+let d = (x1-x)**2; 
+let d2 = (y1-y)**2; 
+let d3 = (d+d2); 
+let d4 = d3**0.5 
+if(d4>r){ 
+document.write("O ponto inserido não faz parte do circulo."); 
+} 
+else{ 
+document.write("O ponto inserido faz parte do circulo.") 
+}
+
+//7. O IMC (Índice de Massa Corporal), pode ser calculado dividindo-se o peso da pessoa (em kg) pela altura (h em metros) elevada ao quadrado (IMC=m/h²). Escreva um programa que leia o peso e a altura de uma pessoa, calcule e mostre o IMC e a faixa em que o indivíduo se enquadra de acordo com a tabela abaixo.
+
+let peso = Number(prompt("Digite o seu peso: ")); 
+let altura = Number(prompt("Digite a sua altura: ")); 
+let imc = peso/(altura**2);
+if(imc<=18.5){ 
+document.write("Você está abaixo do peso."); 
+} 
+else if(imc>18.5 && imc<=24.9){ 
+document.write("Você está com o peso normal."); 
+} 
+else if(imc>25 && imc<=29.9){ 
+document.write("Você está acima do peso."); 
+} 
+else if(imc>30 && imc<=34.9){ 
+document.write("Você está com obesidade nivel 1."); 
+} 
+else if(imc>35 && imc<=39.9){ 
+document.write("Você está com obesidade nivel 2."); 
+} 
+else if(imc>=40){ 
+document.write("Você está com obesidade nivel 3."); 
+}
